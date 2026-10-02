@@ -1,0 +1,12 @@
+# Securitized Products and Structured Finance Projects
+
+4 Python projects on securitized products and structured finance. Each folder has the code, any output charts or data files, and a README covering what it does, the data, the method, results and honest limitations.
+
+All projects use real public market, rate or filing data wherever possible, built with AI assistance (Claude Code) as a build-and-learn exercise and checked against known results. Each README states what was real, what was synthetic and what the model cannot do.
+
+| Project | What it does |
+|---|---|
+| [Agency MBS Option-Adjusted Spread (OAS) Model](Agency_MBS_Option_Adjusted_Spread_Model) | Simulates Hull-White interest-rate paths (real SOFR/Treasury-calibrated), drives a path-dependent prepayment model off each path's own refinancing incentive, and solves via bisection for the Option-Adjusted Spread that makes the average simulated present value equal a target market price - the real, standard Agency MBS relative-value methodology. |
+| [CLO Waterfall and OC/IC Trigger Stress-Test Simulator](CLO_Waterfall_and_OC_IC_Trigger_Stress_Test_Simulator) | A full CLO capital structure (AAA through equity) built on a synthetic 200-loan broadly-syndicated leveraged loan collateral pool, with real Moody's WARF rating factors, floating-rate coupons pegged to the real current SOFR, and OC/IC test cure mechanics (diverting principal to delever the senior-most tranche on a covenant breach) stress-tested under 3 default-rate scenarios consistent with real rating-agency CLO stress conventions. |
+| [CMBS Loan-Level Surveillance and Delinquency Prediction Model](CMBS_Loan_Level_Surveillance_and_Delinquency_Prediction_Model) | A loan-level CMBS surveillance model on a 300-loan pool whose DSCR/occupancy trajectories are driven by the **real** commercial real estate price cycle, feeding a gradient-boosting delinquency classifier, ROC/AUROC validation, and a ranked watch-list of loans by predicted delinquency probability. |
+| [Non-Agency RMBS Prepayment and Credit Loss Forecasting Model](Non_Agency_RMBS_Prepayment_and_Credit_Loss_Forecasting_Model) | A loan-level prepayment (CPR) and default (CDR) model for a non-agency-style mortgage pool, driven by **real current mortgage rate data** (for refinancing incentive) and **real Case-Shiller home price data** (for updated LTV / default risk), translated into bond-level yield/WAL/loss impact under 3 HPA scenarios. |
